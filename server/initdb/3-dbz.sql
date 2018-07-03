@@ -84,7 +84,7 @@ public.grade_optativa (
 
 CREATE TABLE IF NOT EXISTS
 public.trilhas (
-  id_trilha           integer,
+  id_trilha           serial,
   codigo_trilha       character(10) NOT NULL,
   nome                varchar(100) NOT NULL,
   descricao           varchar(280),
@@ -102,7 +102,7 @@ public.trilhas (
 
 CREATE TABLE IF NOT EXISTS
 public.modulos (
-  id_modulo           integer,
+  id_modulo           serial,
   codigo_modulo       varchar(10) NOT NULL,
   minimo_disciplinas  integer,
   id_trilha           integer,
