@@ -227,11 +227,11 @@ public.alunos_planejam_disciplinas (
   id_pessoa      bigint NOT NULL,
   nusp_aluno     varchar(10) NOT NULL,
   id_disciplina  bigint NOT NULL,
-  ano_semestre   numeric(5, 1) NOT NULL,
+  num_plano      bigint NOT NULL,
 
   CONSTRAINT pk_plano PRIMARY KEY (id_plano),
   CONSTRAINT sk_plano UNIQUE (id_pessoa, nusp_aluno,
-                         id_disciplina, ano_semestre),
+                              id_disciplina, num_plano),
 
   CONSTRAINT fk_aluno FOREIGN KEY (id_pessoa, nusp_aluno)
     REFERENCES public.alunos (id_pessoa, nusp_aluno)
